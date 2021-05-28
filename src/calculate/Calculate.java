@@ -7,7 +7,6 @@ public class Calculate {
         r = a % b;
         return r < 0 ? r + b : r;
     }
-
     public int log2(int f) {
         return (int) Math.ceil(Math.log10(f) / Math.log10(2));
     }

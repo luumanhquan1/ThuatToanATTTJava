@@ -29,7 +29,7 @@ public class ArrayRepresentation extends Calculate {
         int tg = 0;
         for (int i = t - 1; i >= 0; i--) {
             if (i == t - 1) {
-                arrayShow.add((int) a / tinhSoMu(i, w));
+                arrayShow.add(a / tinhSoMu(i, w));
                 tg = a % tinhSoMu(i, w);
             } else {
                 arrayShow.add(tg / tinhSoMu(i, w));

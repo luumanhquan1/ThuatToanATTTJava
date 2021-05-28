@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package correctly_add_multiples;
+package subtract_exactly_multiples;
+
 /**
  *
  * @author ASUS TUF
  */
 public class main {
     public static void main(String[] args) {
-        CorrrectlyAddMultiples corrrectlyAddMultiples = new CorrrectlyAddMultiples();
-        corrrectlyAddMultiples.inPut();
-        corrrectlyAddMultiples.Count();
+        SubtractExactlyMultiples subtractExactlyMultiples=new SubtractExactlyMultiples();
+        subtractExactlyMultiples.inPut();
+        subtractExactlyMultiples.minus();
     }
 }
