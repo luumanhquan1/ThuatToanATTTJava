@@ -11,7 +11,7 @@ public class ArrayRepresentation extends Calculate {
     int w;
     int f;
     int t;
-    ArrayList<Integer> arrayShow = new ArrayList<>();
+    public int arrayShow[];
 
     public void inPut() {
         Scanner sc = new Scanner(System.in);
@@ -23,19 +23,25 @@ public class ArrayRepresentation extends Calculate {
         f = sc.nextInt();
         m = log2(f);
         t = tinhT(m, w);
+        arrayShow = new int[t];
     }
 
-    public ArrayList showArray(int a, int w, int t) {
+    public void showArray(int a, int w, int t) {
         int tg = 0;
         for (int i = t - 1; i >= 0; i--) {
             if (i == t - 1) {
-                arrayShow.add(a / tinhSoMu(i, w));
+                arrayShow[i] = a / tinhSoMu(i, w);
                 tg = a % tinhSoMu(i, w);
             } else {
-                arrayShow.add(tg / tinhSoMu(i, w));
+                arrayShow[i] = tg / tinhSoMu(i, w);
                 tg = a % tinhSoMu(i, w);
             }
         }
-        return arrayShow;
+    }
+
+    public void outPut() {
+        for (int i = t-1; i >=0; i--) {
+            System.out.print(" " + arrayShow[i]);
+        }
     }
 }

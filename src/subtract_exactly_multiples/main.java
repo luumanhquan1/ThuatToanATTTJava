@@ -13,6 +13,7 @@ public class main {
     public static void main(String[] args) {
         SubtractExactlyMultiples subtractExactlyMultiples=new SubtractExactlyMultiples();
         subtractExactlyMultiples.inPut();
-        subtractExactlyMultiples.minus();
+        subtractExactlyMultiples.minus(subtractExactlyMultiples.arrayA,subtractExactlyMultiples.arrayB);
+        subtractExactlyMultiples.outPut();
     }
 }

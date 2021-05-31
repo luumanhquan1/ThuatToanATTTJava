@@ -14,6 +14,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayRepresentation arrayRepresentation = new ArrayRepresentation();
         arrayRepresentation.inPut();
-        System.out.println("mảng biểu diễn " + arrayRepresentation.showArray(arrayRepresentation.a, arrayRepresentation.w, arrayRepresentation.t));
+        arrayRepresentation.showArray(arrayRepresentation.a, arrayRepresentation.w, arrayRepresentation.t);
+        arrayRepresentation.outPut();
     }
 }

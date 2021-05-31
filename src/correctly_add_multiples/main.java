@@ -12,6 +12,7 @@ public class main {
     public static void main(String[] args) {
         CorrrectlyAddMultiples corrrectlyAddMultiples = new CorrrectlyAddMultiples();
         corrrectlyAddMultiples.inPut();
-        corrrectlyAddMultiples.Count();
+          corrrectlyAddMultiples.Count(corrrectlyAddMultiples.arrayA,corrrectlyAddMultiples.arrayB);
+          corrrectlyAddMultiples.outPut();
     }
 }

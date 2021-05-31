@@ -16,11 +16,12 @@ import java.util.Scanner;
  */
 public class CorrrectlyAddMultiples extends Calculate {
 
-    protected int e = 0;
-    protected int w;
-    protected int t;
-    protected ArrayList<Integer> arrayA = new ArrayList<>();
-    protected ArrayList<Integer> arrayB = new ArrayList<>();
+    public int e = 0;
+    public int w;
+    public int t;
+    public int arrayA[];
+    public int arrayB[];
+    public int arrayC[];
 
     public void inPut() {
         Scanner sc = new Scanner(System.in);
@@ -28,18 +29,24 @@ public class CorrrectlyAddMultiples extends Calculate {
         w = sc.nextInt();
         System.out.println("Nhập t:");
         t = sc.nextInt();
+        arrayA=new int[t];
+        arrayB=new int[t];
+        arrayC=new int[t];
         inPutArray();
+    
     }
 
-    void inPutArray() {
+    public void inPutArray() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập Array A:");
-        for (int i = t - 1; i >= 0; i--) {
-            arrayA.add(sc.nextInt());
+        for (int i =t-1; i >=0; i--) {
+            System.out.printf("a[%d]=", i);
+            arrayA[i]=sc.nextInt();
         }
         System.out.println("Nhập Array B:");
-        for (int i = 0; i < t; i++) {
-            arrayB.add(sc.nextInt());
+        for (int i =t-1; i >=0; i--) {
+            System.out.printf("b[%d]=", i);
+             arrayB[i]=sc.nextInt();
         }
     }
 
@@ -51,20 +58,20 @@ public class CorrrectlyAddMultiples extends Calculate {
         }
     }
 
-    ArrayList Count() {
-        ArrayList<Integer> arrayC = new ArrayList<>();
-        arrayC.add(mod(arrayA.get(arrayA.size() - 1) + arrayB.get(arrayA.size() - 1) + e, tinhSoMu(1, w)));
-        e = bitMind(arrayA.get(arrayA.size() - 1), arrayB.get(arrayA.size() - 1), e, w);
-        for (int i = t - 2; i >= 0; i--) {
-            arrayC.add(mod(arrayA.get(i) + arrayB.get(i) + e, tinhSoMu(1, w)));
-            e = bitMind(arrayA.get(i), arrayB.get(i), e, w);
+    public void Count(int A[],int B[]) {
+        arrayC[0]=(mod(A[0] + B[0] + e, tinhSoMu(1, w)));
+        e = bitMind(A[0], B[0], e, w);
+        for (int i = 1; i < t; i++) {
+            arrayC[i]=(mod(A[i] + B[i] + e, tinhSoMu(1, w)));
+            e = bitMind(A[i], B[i], e, w);
         }
-        System.out.printf("e:" + e + "(");
-        for (int i = t - 1; i >= 0; i--) {
-            System.out.printf(arrayC.get(i) + ";");
-        }
-        System.out.printf(")");
-        return arrayC;
     }
 
+    public void outPut() {
+        System.out.printf("e:" + e + "(");
+        for (int i = t - 1; i >= 0; i--) {
+            System.out.printf(arrayC[i] + ";");
+        }
+        System.out.printf(")");
+    }
 }
