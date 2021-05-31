@@ -19,7 +19,6 @@ public class MinusOnFp extends PlusOnFp {
     public void inPut() {
         super.inPut();
     }
-    
    public  void minus(){
        SubtractExactlyMultiples sem=new SubtractExactlyMultiples();
        sem.arrayC=new int[t];

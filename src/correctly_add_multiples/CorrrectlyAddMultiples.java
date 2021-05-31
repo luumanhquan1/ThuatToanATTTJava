@@ -51,7 +51,7 @@ public class CorrrectlyAddMultiples extends Calculate {
     }
 
     int bitMind(int a, int b, int e, int w) {
-        if (a + b + e > tinhSoMu(1, w)) {
+        if (a + b + e >= tinhSoMu(1, w)) {
             return 1;
         } else {
             return 0;
