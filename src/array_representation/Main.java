@@ -5,6 +5,8 @@
  */
 package array_representation;
 
+import calculate.Calculate;
+
 /**
  *
  * @author ASUS TUF
@@ -12,6 +14,7 @@ package array_representation;
 public class Main {
 
     public static void main(String[] args) {
+     
         ArrayRepresentation arrayRepresentation = new ArrayRepresentation();
         arrayRepresentation.inPut();
         arrayRepresentation.showArray(arrayRepresentation.a, arrayRepresentation.w, arrayRepresentation.t);

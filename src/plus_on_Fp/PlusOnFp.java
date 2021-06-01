@@ -16,7 +16,7 @@ import subtract_exactly_multiples.SubtractExactlyMultiples;
  */
 public class PlusOnFp extends CorrrectlyAddMultiples {
 
-   protected int p;
+    protected int p;
 
     public void inPut() {
         Scanner sc = new Scanner(System.in);
@@ -32,15 +32,15 @@ public class PlusOnFp extends CorrrectlyAddMultiples {
     }
 
     void count() {
-        super.Count(arrayA,arrayB);
+        super.Count(arrayA, arrayB);
         if (e == 1) {
             ArrayRepresentation arrayRepresentation = new ArrayRepresentation();
             arrayRepresentation.arrayShow = new int[t];
             arrayRepresentation.showArray(p, w, t);
             SubtractExactlyMultiples subtractExactlyMultiples = new SubtractExactlyMultiples();
             subtractExactlyMultiples.arrayC = new int[t];
-            subtractExactlyMultiples.t=t;
-            subtractExactlyMultiples.w=w;
+            subtractExactlyMultiples.t = t;
+            subtractExactlyMultiples.w = w;
             subtractExactlyMultiples.minus(super.arrayC, arrayRepresentation.arrayShow);
             subtractExactlyMultiples.outPut();
         } else {

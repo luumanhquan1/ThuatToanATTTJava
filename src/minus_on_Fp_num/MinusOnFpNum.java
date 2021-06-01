@@ -33,6 +33,7 @@ public class MinusOnFpNum extends  MinusOnFp{
         ar.arrayShow=new int[t];
         ar.showArray(b, w, t);
         arrayB=ar.arrayShow;
+        arrayC=new int[t];
     }
     public  void  minus(){
     super.minus();

@@ -19,20 +19,21 @@ public class MinusOnFp extends PlusOnFp {
     public void inPut() {
         super.inPut();
     }
-   public  void minus(){
-       SubtractExactlyMultiples sem=new SubtractExactlyMultiples();
-       sem.arrayC=new int[t];
-       sem.t=t;
-       sem.w=w;
-       sem.minus(arrayA, arrayB);
-       if(sem.e==1){
-           ArrayRepresentation ar=new ArrayRepresentation();
-           ar.arrayShow=new int[t];
-           ar.showArray(p, w, t);
-           super.Count(sem.arrayC, ar.arrayShow);
-           super.outPut();
-       }else{
-        sem.outPut();
-       }
-   }
+
+    public void minus() {
+        SubtractExactlyMultiples sem = new SubtractExactlyMultiples();
+        sem.arrayC = new int[t];
+        sem.t = t;
+        sem.w = w;
+        sem.minus(arrayA, arrayB);
+        if (sem.e == 1) {
+            ArrayRepresentation ar = new ArrayRepresentation();
+            ar.arrayShow = new int[t];
+            ar.showArray(p, w, t);
+            super.Count(sem.arrayC, ar.arrayShow);
+            super.outPut();
+        } else {
+            sem.outPut();
+        }
+    }
 }
