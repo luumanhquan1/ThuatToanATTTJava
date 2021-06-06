@@ -7,6 +7,7 @@ public class Calculate {
         r = a % b;
         return r < 0 ? r + b : r;
     }
+
     public int log2(int f) {
         return (int) Math.ceil(Math.log10(f) / Math.log10(2));
     }
@@ -17,9 +18,7 @@ public class Calculate {
 
     public int tinhSoMu(int a, int w) {
         int ketQua = 1;
-        for (int i = 0; i < a * w; i++) {
-            ketQua = ketQua * 2;
-        }
+        ketQua = ketQua << a * w;
         return ketQua;
     }
 }

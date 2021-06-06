@@ -17,7 +17,7 @@ import subtract_exactly_multiples.SubtractExactlyMultiples;
 public class PlusOnFp extends CorrrectlyAddMultiples {
 
     protected int p;
-
+   protected  int a,b;
     public void inPut() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập P:");
@@ -28,7 +28,29 @@ public class PlusOnFp extends CorrrectlyAddMultiples {
         arrayA = new int[t];
         arrayB = new int[t];
         arrayC = new int[t];
-        super.inPutArray();
+        System.out.println("1.Nhập a và b:");
+        System.out.println("2.Nhập Mảng A và B:");
+        int select = 0;
+        System.out.println("Chọn----");
+        select=sc.nextInt();
+        ArrayRepresentation ar=new ArrayRepresentation();
+        switch(select){
+        case 1:
+            System.out.println("Nhập a:");
+            a=sc.nextInt();
+            ar.arrayShow=new int[t];
+            ar.showArray(a, w, t);
+            arrayA=ar.arrayShow;
+             System.out.println("Nhập b:");
+            b=sc.nextInt();
+            ar.arrayShow=new int[t];
+            ar.showArray(b, w, t);
+            arrayB=ar.arrayShow;
+            break;
+        case 2:
+            super.inPutArray();
+            break;
+        }
     }
 
     void count() {

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package minus_on_Fp_num;
+package multiplication;
 
 /**
  *
@@ -11,8 +11,7 @@ package minus_on_Fp_num;
  */
 public class main {
     public static void main(String[] args) {
-        MinusOnFpNum mofn=new MinusOnFpNum();
-        mofn.Input();
-        mofn.minus();
+        Multiplication multiplication=new Multiplication();
+        multiplication.inPut();
     }
 }

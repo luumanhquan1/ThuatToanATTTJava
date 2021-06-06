@@ -50,8 +50,8 @@ public class CorrrectlyAddMultiples extends Calculate {
         }
     }
 
-    int bitMind(int a, int b, int e, int w) {
-        if (a + b + e >= tinhSoMu(1, w)) {
+    int bitMind(int a, int b, int e, int exponential) {
+        if (a + b + e >= exponential) {
             return 1;
         } else {
             return 0;
@@ -59,11 +59,12 @@ public class CorrrectlyAddMultiples extends Calculate {
     }
 
     public void Count(int A[],int B[]) {
-        arrayC[0]=(mod(A[0] + B[0] + e, tinhSoMu(1, w)));
-        e = bitMind(A[0], B[0], e, w);
+        int exponential=tinhSoMu(1, w);
+        arrayC[0]=(mod(A[0] + B[0] + e, exponential));
+        e = bitMind(A[0], B[0], e, exponential);
         for (int i = 1; i < t; i++) {
-            arrayC[i]=(mod(A[i] + B[i] + e, tinhSoMu(1, w)));
-            e = bitMind(A[i], B[i], e, w);
+            arrayC[i]=(mod(A[i] + B[i] + e, exponential));
+            e = bitMind(A[i], B[i], e, exponential);
         }
     }
 

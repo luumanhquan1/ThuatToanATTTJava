@@ -5,14 +5,12 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class ArrayRepresentation extends Calculate {
-
     int m;
     int a;
     int w;
     int f;
     int t;
     public int arrayShow[];
-
     public void inPut() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập a:");
