@@ -13,32 +13,23 @@ public class Multiplication extends PlusOnFp {
         arrayC = new int[2 * t];
     }
 
-    void base2(int a) {
-        int b;
-        int bitDau = 0, bitSau = 0;
-        int j = 0;
-        for (int i = 0; i < 2 * w; i++) {
-            b = a % 2;
-            if (i < w) {//w bit dau
-                bitDau = bitDau + b * tinhSoMu(1, i);
-            } else {//w bit sau
-                bitSau = bitSau + b * tinhSoMu(1, j);
-                j++;
-            }
-            a = a / 2;
-        }
-        v = bitDau;
-        u = bitSau;
+    void base2(int a, int wBitDau) {
+        v = 0;
+        u = 0;
+        v = a & wBitDau;
+        u = a & ~wBitDau;
+        u = u >> w;//dịch để bit sau về đầu
     }
 
     public void multiply() {
+        int wBitDau = wbitdau(w);
         for (int i = 0; i <= t - 1; i++) {
             arrayC[i] = 0;
         }
         for (int i = 0; i <= t - 1; i++) {
             u = 0;
             for (int j = 0; j <= t - 1; j++) {
-                base2((arrayC[j + i] + (arrayA[i] * arrayB[j]) + u));
+                base2((arrayC[j + i] + (arrayA[i] * arrayB[j]) + u), wBitDau);
                 arrayC[i + j] = v;
             }
             arrayC[i + t] = u;
