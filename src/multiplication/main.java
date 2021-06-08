@@ -13,5 +13,7 @@ public class main {
     public static void main(String[] args) {
         Multiplication multiplication=new Multiplication();
         multiplication.inPut();
+        multiplication.multiply();
+     multiplication.outPut();
     }
 }
