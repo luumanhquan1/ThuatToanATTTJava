@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package multiplication;
+package segment_eratosthenes;
 
 /**
  *
@@ -11,10 +11,9 @@ package multiplication;
  */
 public class main {
     public static void main(String[] args) {
-        Multiplication multiplication=new Multiplication();
-        multiplication.inPut();
-        multiplication.multiply();
-     multiplication.outPut();
-     
+        SegmentEratosthenes eratosthenes=new SegmentEratosthenes();
+        eratosthenes.inPut();
+        eratosthenes.primeSequence();
+        eratosthenes.outPut();
     }
 }

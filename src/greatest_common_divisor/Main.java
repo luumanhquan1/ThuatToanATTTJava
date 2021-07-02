@@ -3,18 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package multiplication;
+package greatest_common_divisor;
 
 /**
  *
  * @author ASUS TUF
  */
-public class main {
+public class Main {
+
     public static void main(String[] args) {
-        Multiplication multiplication=new Multiplication();
-        multiplication.inPut();
-        multiplication.multiply();
-     multiplication.outPut();
-     
+        GreatestCommonDivisor gcd = new GreatestCommonDivisor();
+        gcd.inPut();
+        gcd.outPut();
     }
 }
