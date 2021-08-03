@@ -9,7 +9,9 @@ public class Calculate {
     }
 
     public int log2(int f) {
-        return (int) Math.ceil(Math.log10(f) / Math.log10(2));
+        return (int)
+                Math.ceil(
+                Math.log10(f) / Math.log10(2));
     }
 
     public int tinhT(int m, int w) {

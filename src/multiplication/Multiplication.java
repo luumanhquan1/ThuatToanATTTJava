@@ -15,9 +15,9 @@ public class Multiplication extends PlusOnFp {
     }
 
     void base2(int a, int wBitDauMax) {
-        v = a & wBitDauMax;
+        v = a & wBitDauMax;///  v=uv%2^w
         u = a & ~wBitDauMax;
-        u = u >> w;//dịch để bit sau về đầu
+        u = u >> w;//dịch để bit sau về đầu//  uv/2^w
     }
 
     public void multiply() {
